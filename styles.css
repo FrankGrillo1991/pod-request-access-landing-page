@@ -37,3 +37,22 @@ main {
     z-index: 0;
 }
 
+.container {
+    position: absolute;
+    background-color: #121725;
+    max-width: 723px;
+    left: 0;
+    bottom: 0;
+    margin-left: 165px;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-weight: 300;
+    line-height: 62px;
+    color: #54e6af;
+    text-transform: uppercase;
+    margin-top: 88px;
+    margin-bottom: 24px;
+}
+
