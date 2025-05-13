@@ -1,30 +1,23 @@
 const form = document.querySelector("form");
 const email = document.getElementById("email");
 const error = document.getElementById("error");
-
+const successMessage = document.getElementById("success-message");
+  
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkInput();
 });
 
 function checkInput() {
-    const emailValue = email.value.trim();
-    error.style.visibility = "visible";
-    if (emailValue === "") {
-        error.style.color = "#fb3e3e";
-        error.innerHTML = "Oops! Please add your email";
-    } else if (!isEmail(emailValue)) {
-        error.style.color = "#fb3e33";
-        error.innerHTML = "Oops! Please check your email";
-    } else {
-        error.style.color = "#54e6af";
-        error.innerHTML = "Thank you! We'll get back to you soon!";
-        form.reset();
-    }
+  const successMessage = document.getElementById("success-message");
+    if (!emailPattern.test(email)) {
+    emailError.textContent = "Please enter a valid email address.";
+    successMessage.textContent = ""; // clear success
+    return false; // prevent form submission
+  } else {
+    emailError.textContent = "";
+    successMessage.textContent = "Email submitted successfully!";
+    return false; // just show message, don't reload page
+  }
 }
 
-function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        email
-    );
-}
