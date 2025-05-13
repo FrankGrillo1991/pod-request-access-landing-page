@@ -89,13 +89,22 @@ input {
     margin-bottom: 8px;
 }
 
-.error {
+#email-error {
     visibility: hidden;
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 14px;
     padding-left: 32px;
     color: #fb3e3e;
+}
+
+#success-message {
+    visibility: hidden;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 14px;
+    padding-left: 32px;
+    color: green;
 }
 
 button {
