@@ -26,10 +26,10 @@
  <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
   Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
 
-  <form>
-    <input type="email" id="email" placeholder="Email Address">
+  <form onsubmit="return validateEmail()">
+     <input type="email" id="email" placeholder="Email Address">
      <span id="email-error"></span><br>
-    <button type="submit">Request access</button>
+     <button type="submit">Request access</button>
   </form>
 
   <p id="success-message"></p>
