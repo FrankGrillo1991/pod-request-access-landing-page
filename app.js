@@ -1,6 +1,6 @@
-const form = document.querySelector("form"),
-const email = document.querySelector("input"),'
-const error = document.querySelector(".error");
+const form = document.querySelector("form");
+const email = document.querySelector("input");
+const error = document.getElementById("error");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function checkInput() {
-    const emailValue = emai.value.trim();
+    const emailValue = email.value.trim();
     error.style.visibility = "visible";
     if (emailValue === "") {
         error.style.color = "#fb3e3e";
