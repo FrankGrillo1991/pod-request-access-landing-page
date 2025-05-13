@@ -1,15 +1,11 @@
-const form = document.querySelector("form");
-const email = document.getElementById("email");
-const error = document.getElementById("error");
-const successMessage = document.getElementById("success-message");
-  
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    checkInput();
-});
 
-function checkInput() {
+
+
+function validateEmail() {
+    const email = document.getElementById("email").value;
+  const emailError = document.getElementById("email-error");
   const successMessage = document.getElementById("success-message");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
     emailError.textContent = "Please enter a valid email address.";
     successMessage.textContent = ""; // clear success
