@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const email = document.querySelector("input");
+const email = document.getElementById("input");
 const error = document.getElementById("error");
 
 form.addEventListener("submit", (e) => {
